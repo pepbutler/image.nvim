@@ -10,7 +10,7 @@ local spawn = function()
   should_be_alive = true
 
   local handle, pid = vim.loop.spawn("ueberzug", {
-    args = { "layer", "--silent" },
+    args = { "layer", "--silent", "-o", "sixel" },
     stdio = { stdin, stdout, stderr },
   }, function(code, signal)
     child = nil
